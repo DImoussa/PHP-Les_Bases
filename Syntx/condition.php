@@ -1,8 +1,17 @@
 <?php
 
 /**
- *
- */
+ * - "==" (égalité)
+ * - "="（inegalite）
+ * - "›" (plus grand)
+ * - ">=" (plus grand ou égal)
+ * - "<" (plus petit)
+ * - "<=" (plus petit ou égal)
+ * - "&&" (ET logique)
+ * - "||" (OU logique)
+ * - "|" (NON logique)
+*/
+
 $name = "Moussa";
 if ($name === "Moussa"){ // le triple égale est un comparateur de manière stricte il vérifie de manière binaire
     echo "Je m'appelle " . $name. "\n";
