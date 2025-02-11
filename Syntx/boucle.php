@@ -37,14 +37,14 @@ foreach ($tabChiffre as $keyChiffre => $valueChiffre){
 
 foreach ($tabChiffre as $keyChiffre => $valueChiffre){
     if ($keyChiffre == 1){
-        echo "La clé numéro". $keyChiffre . "correspond à la valeur" . $valueChiffre;
+        echo "La clé numéro". $keyChiffre . "correspond à la valeur" . $valueChiffre . "<br>";
     }
 }
 
 
 $config = ['color' => "bleu", "connection"=> "ssh"];
 
-echo $config["color"];//blue
+echo $config["color"]. "<br>";//blue
 
 $resulRequete = [
     4565 =>[
@@ -59,7 +59,22 @@ $resulRequete = [
     "nationalité" => "fr"
         ],
 
-    4566 =>[
+    ];
+$tabTypeCarte = [
+    "cv" => "Carte Vitale",
+    "ci" => "Carte d'identité",
+    "pc" => "Permis de conduire"
+
+];
+foreach ($resulRequete as $KeyRequet => $valueRequet){
+    echo "Son nom est ". $valueRequet["nom"]. " et son prénom ". $valueRequet["prenom"].  "<br>";
+    echo " il possède les identié suivante " ."<br>";
+    foreach ($valueRequet["identite"] as $keyidentite => $valIdentite){
+        echo  $tabTypeCarte[$keyidentite] ." :". $valIdentite ."<br>";
+    }
+}
+
+    /*4566 =>[
     "nom" =>"Joe",
     "prenom" => "Beni",
     "identite" => [
@@ -70,31 +85,8 @@ $resulRequete = [
     "age" => 46,
     "nationalité" => "fr"
         ]
-];
+];*/
 
-
-//foreach ($resulRequete as $keyResult => $valueResult){
-//     echo $resulRequete[$keyResult]["prenom"] . "<br>";
-//}
-
-$tabTypeCarte = [
-    "PC" => "Permis de conduire",
-    "CI" => "Carte d'identité",
-    "CV" => "Carte Vitale"
-
-];
-
-foreach ($resulRequete as $keyResult => $valueResult){
-    echo $valueResult["prenom"]. "à pour identité :". $resulRequete[$keyResult]["identite"]["cv"]. "<br>";
-    //Syntrxvar_dump($valueResult);
-    foreach ($valueResult["identite"] as $keyIdentite => $valueIdentite){
-
-            echo "Avec comme clé : " . $tabTypeCarte[$keyIdentite] . " " . $valueIdentite . "<br>";
-
-
-    }
-
-}
 
 
 
