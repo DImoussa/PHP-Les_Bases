@@ -1,14 +1,13 @@
 <?php
-use TP2Cinema\Film;
-use TP2Cinema\Investiseur;
-use TP2Cinema\Production;
-use TP2Cinema\Realisateur;
-use TP2Cinema\Acteur;
-include ("Production.php");
-include ("Film.php");
-include ("Realisateur.php");
-include ("Acteur.php");
-include "Investiseur.php";
+
+use Tp2cinema\Investiseur;
+use Tp2cinema\Realisateur;
+use Tp2cinema\Film;
+use Tp2cinema\Acteur;
+
+include "vendor/autoload.php";
+
+
 
 $film1 = new film(1,"Bac Nord",563921);
 
