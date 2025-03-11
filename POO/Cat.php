@@ -1,22 +1,10 @@
 <?php
 
 // Constante est une variable statique
-const genreRef = [
-    1=> "Female",
-    2=> "Male",
-    3=> "Other"
-];
 
-//Tableau de référence qui vienne réferencer par exemple la varible color
-const colorRef = [
-    0 => "No color",
-    1 => "White",
-    2 => "Blue",
-    3 => "Grey"
-];
 class Cat
 {
-    private string $name;
+    public string $name;
     private int $gender;
     private int $age;
     private int $weight;
@@ -70,7 +58,3 @@ class Cat
 
 
 
-$felix = new cat("Félix",1,1);
-//Acces a la variable name de manière public
-//$felix-> name= "Felix";
-var_dump($felix);
