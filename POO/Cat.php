@@ -30,7 +30,7 @@ class Cat
 
 
 
-    
+
 
     public function getGender() :string{
         return genreRef[$this->gender];
