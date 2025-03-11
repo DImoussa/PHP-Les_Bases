@@ -1,0 +1,17 @@
+{
+    "name": "mamadou/tp2cinema",
+    "description": "Tp cours de base",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Tp2cinema\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Moussa Diallo",
+            "email": "moussadou128@gmail.com"
+        }
+    ],
+    "require": {}
+}
